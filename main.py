@@ -15,10 +15,15 @@ while i < r :
     detetives.append(d)
     i += 1
 
-assassinos.sort()
-vitimas.sort()
-detetives.sort()
 todomundo = assassinos + vitimas + detetives
 todomundo = list(set(todomundo))
 todomundo.sort()
 
+for p in todomundo :
+    print(60 * "-")
+    if p in vitimas :
+        p += (" (in memorian):")
+    if p in detetives:
+        p += (": detetive")
+
+    print(p)
